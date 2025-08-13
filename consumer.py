@@ -193,7 +193,7 @@ def main():
                 message_queue.put(msg.value(), timeout=0.1)
             except Queue.Full:
                 logger.warning("Message queue full, skipping message")
-                # Could implement backpressure strategies here
+               
                 
     except KeyboardInterrupt:
         logger.info("Keyboard interrupt received")
