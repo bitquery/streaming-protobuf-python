@@ -104,7 +104,7 @@ def process_message(buffer):
         #    else:
         #        print(f"\n Block: {tx_block.Header.Slot} | Time: {timestamp}")
                 
-            # print_protobuf_message(tx_block, encoding='base58') # uncomment this to print the message
+        # print_protobuf_message(tx_block, encoding='base58') # uncomment this to print the message
 
     except DecodeError as err:
         logger.error(f"Protobuf decoding error: {err}")
