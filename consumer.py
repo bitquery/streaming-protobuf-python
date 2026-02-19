@@ -93,17 +93,7 @@ def process_message(buffer):
         timestamp = datetime.datetime.now(datetime.timezone.utc)
 
 
-        print(f"\n Block: {tx_block.Header.Slot} | Time: {timestamp}")
-
-        # below code will print tx signature and block number, uncommment if you need to test
-        #    if hasattr(tx_block, 'Transactions') and tx_block.Transactions:
-        #        tx_signature = tx_block.Transactions[0].Signature
-  
-        #        signature_str = base58.b58encode(tx_signature).decode()
-        #        print(f"\n Transaction: {signature_str} | Block: {tx_block.Header.Slot} | Time: {timestamp}")
-        #    else:
-        #        print(f"\n Block: {tx_block.Header.Slot} | Time: {timestamp}")
-                
+        print(f"\n Block: {tx_block.Header.Slot} | Time: {timestamp}")   
         # print_protobuf_message(tx_block, encoding='base58') # uncomment this to print the message
 
     except DecodeError as err:
